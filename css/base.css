@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+
+
+html,body{
+  background-color: skyblue;
+
+}
+img{
+  width: 180px;
+  height: 180px;
+  
+
+}
+main{
+  width: 960px;
+  margin: auto;
+  
+  
+}
+section{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+ 
+}
