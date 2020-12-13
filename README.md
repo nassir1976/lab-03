@@ -1,4 +1,6 @@
 # lab-03
+# Lab completed by Mark Duenas and Nassir Abegaz
+
 ## Lab 03 - Flexbox and Templating
 #### Number and name of feature: #1: Pagination
 - Estimate of time needed to complete: 1.5 hours
