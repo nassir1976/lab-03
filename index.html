@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/layouts.css" type = "text/css">
     <link rel="stylesheet" href="css/modules.css" type = "text/css">
     <script id="template" type="x-tmpl-mustache">
-      <div class = "{{class}}">
+      <div horns = "{{horns}}" class = "{{class}}">
            <h2>{{title}}</h2>
            <img  src="{{image_url}}" alt="{{title}}">
            <p>{{description}}</p>
@@ -32,17 +32,17 @@
         <button type="button" id="page1">Page 1</button>
         <button type="button" id="page2">Page 2</button>
         <select id="keyword-filter"> 
-          <option value="default" >Sort By </option>
-          <option type="list" class="All">Show All</option> 
-          <option value="Horns"class="option">Sort by Horns</option>
+          <option value="default" >Sort By </option> 
+          <option value="horns"class="option">Sort by Horns</option>
           <option value = "title"class="option">Sort by Title</option>
         </select>
-        <section class="bar"></section>
+        <!-- <section class="bar"></section> -->
        
     </nav>
   </header>
     <main>
-      <section id="images"></section>
+      <section id="images">
+      </section>
       </main>
     <footer>
       &copy; 2020 Code Fellows
