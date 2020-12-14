@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="css/reset.css" type = "text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Texturina:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css" type = "text/css">
     <link rel="stylesheet" href="css/layouts.css" type = "text/css">
     <link rel="stylesheet" href="css/modules.css" type = "text/css">
-    <script id="template" type="x-tmpl-mustache"> 
-      <div class = "{{class}}">
-        <h2>{{title}}</h2>
-        <img  src="{{image_url}}" alt="{{title}}">
-        <p>{{description}}</p>
-        <p></p>
+    <script id="template" type="x-tmpl-mustache">
+      <div horns = "{{horns}}" class = "{{class}}">
+           <h2>{{title}}</h2>
+           <img  src="{{image_url}}" alt="{{title}}">
+           <p>{{description}}</p>
+           <p></p>
       </div>
     </script>
 
@@ -24,14 +25,20 @@
   <body>
     <header>
       <h1>The Gallery of Horns</h1>
+      
+      
       <nav>
+        
         <button type="button" id="page1">Page 1</button>
         <button type="button" id="page2">Page 2</button>
-        <select id="keyword-filter">
-          <option value="default">Sort By </option>
-          <option value="horns">Sort by Horns</button>
-          <option value = "title">Sort by Title</button>
+
+        <select id="keyword-filter"> 
+          <option value="default" >Sort By </option> 
+          <option value="horns"class="option">Sort by Horns</option>
+          <option value = "title"class="option">Sort by Title</option>
+
         </select>
+        <!-- <section class="bar"></section> -->
        
     </nav>
   </header>
