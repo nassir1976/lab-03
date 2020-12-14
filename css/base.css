@@ -17,19 +17,48 @@ h1{
   padding: 0%;
   font-size: 30px;
   font-weight: bold;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+.bar {
+  height: 10px;
+  width: 35%;
+  margin: 5px auto;
+  background-color:green;
+  border-radius: 5px;
+  
+}
+.bar:hover {
+  background: sandybrown;
 }
 #page1,#page2{
 font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
 border-radius: 7px;
+width:120px;
+letter-spacing: normal;
+justify-content: space-evenly;
+
 }
+#page2:hover{
+  background-color:steelblue;
+  cursor: pointer;
+}
+#page1:hover{
+  background-color:steelblue;
+}
+
 #keyword-filter{
   font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
 border-radius: 7px;
-border-color:solid black;
+border-color: solid black ;
+color:black;
 }
-
+#keyword-filter:hover{
+  background-color:steelblue;
+  cursor: pointer;
+}
 img{
   width: 180px;
   height: 180px;
