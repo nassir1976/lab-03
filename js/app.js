@@ -50,10 +50,15 @@ $('#page2').on('click', function () {
   $(page2).show();
 
 });
+
 function sortByTitle(images) {
-  images.sort(function (a, b) {
-    let nameA = a.toUpperCase();
-    let nameB = b.toUpperCase();
+  return images.sort(function (a, b) {
+    let nameA = $(a).html();
+    let nameB = $(b).html();
+
+    console.log(nameA);
+    console.log(nameB);
+
     if (nameA < nameB) {
       return -1;
 
@@ -64,9 +69,16 @@ function sortByTitle(images) {
 
   });
 }
-$('#keyword-filter').on('change', (e) => {
- let images = $('img');
- 
-  
 
-})
+// Event by
+$('#keyword-filter').on('change', function(){
+  let value = this.value;
+  console.log(value);
+
+  if(this.value === 'title') {
+    let $images = $('div');
+    let $newList = sortByTitle($images);
+    $('#images').html($newList);
+  }
+
+});
