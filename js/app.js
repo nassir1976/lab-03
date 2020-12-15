@@ -1,15 +1,19 @@
 'use strict';
+
 $.ajax('../data/page-1.json')
   .then(data => {
     data.forEach(animal => {
       let template = $('#template').html();
+      let hornObject = new Animal(animal);
       let page1 = Mustache.render(template, {
-        keyword: animal.keyword,
-        title: animal.title,
-        image_url: animal.image_url,
-        description: animal.description,
+        keyword: hornObject.keyWord,
+        title: hornObject.title,
+        image_url: hornObject.image_url,
+        description: hornObject.description,
         class: "page1",
-        horns: animal.horns,
+        horns: hornObject.horns,
+
+
       });
       $('#images').append(page1);
 
@@ -21,18 +25,19 @@ $.ajax('../data/page-2.json')
   .then(data => {
     data.forEach(animal => {
       let template = $('#template').html();
+      let hornObject = new Animal(animal);
       let page2 = Mustache.render(template, {
-        keyword: animal.keyword,
-        title: animal.title,
-        image_url: animal.image_url,
-        description: animal.description,
+        keyword: hornObject.keyWord,
+        title: hornObject.title,
+        image_url: hornObject.image_url,
+        description: hornObject.description,
         class: "page2",
-        horns: animal.horns,
+        horns: hornObject.horns,
 
 
       });
       $('#images').append(page2);
-
+      $('.page2').hide();
 
     });
   });
@@ -77,16 +82,8 @@ function sortByHorns(horns) {
     let hornA = $(a).attr("horns");
     let hornB = $(b).attr("horns");
 
-    console.log(hornA);
-    console.log(hornB);
+    return parseInt(hornA) - parseInt(hornB);
 
-    if (hornA < hornB) {
-      return -1;
-
-    } if (hornA > hornB) {
-      return 1;
-    }
-    return 0;
 
   });
 }
@@ -107,7 +104,28 @@ $('#keyword-filter').on('change', function () {
   }
 });
 
+function Animal(object) {
 
+
+  this.image_url = object.image_url;
+  this.title = object.title;
+  this.description = object.description;
+  this.keyWord = object.keyword;
+  this.horns = object.horns;
+};
+
+
+$("#filter").on('change', function () {
+  let value = this.value;
+  let $allImagesValue = $('div');
+  for (let i = 0; i < $allImagesValue.length; i++) {
+    if ($allImagesValue[i].attributes.keyword.value !== value) {
+      $($allImagesValue[i]).hide();
+    } else if ($allImagesValue[i].attributes.keyword.value === value) {
+      $($allImagesValue[i]).show();
+    }
+  }
+});
 
 
 

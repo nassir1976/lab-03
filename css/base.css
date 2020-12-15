@@ -40,6 +40,7 @@ letter-spacing: normal;
 justify-content: space-evenly;
 
 }
+
 #page2:hover{
   background-color:steelblue;
   cursor: pointer;
@@ -48,7 +49,7 @@ justify-content: space-evenly;
   background-color:steelblue;
 }
 
-#keyword-filter{
+#keyword-filter ,filter {
   font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
 border-radius: 7px;
