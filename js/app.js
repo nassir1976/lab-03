@@ -1,10 +1,21 @@
 'use strict';
 
-$.ajax('../data/page-1.json')
+function Animal(object) {
+
+
+  this.image_url = object.image_url;
+  this.title = object.title;
+  this.description = object.description;
+  this.keyWord = object.keyword;
+  this.horns = object.horns;
+}
+
+$.ajax('./data/page-1.json')
   .then(data => {
     data.forEach(animal => {
       let template = $('#template').html();
       let hornObject = new Animal(animal);
+      // pass two argument to render teplate & the object propertis (keyword,title,image_url,description,horns)//
       let page1 = Mustache.render(template, {
         keyword: hornObject.keyWord,
         title: hornObject.title,
@@ -21,7 +32,7 @@ $.ajax('../data/page-1.json')
     });
   });
 
-$.ajax('../data/page-2.json')
+$.ajax('./data/page-2.json')
   .then(data => {
     data.forEach(animal => {
       let template = $('#template').html();
@@ -83,12 +94,10 @@ function sortByHorns(horns) {
     let hornB = $(b).attr("horns");
 
     return parseInt(hornA)-parseInt(hornB);
-
-
-
   });
 }
-// Event by
+
+// EventListener to sort by title , horns//
 $('#keyword-filter').on('change', function () {
   let value = this.value;
   console.log(value);
@@ -105,15 +114,7 @@ $('#keyword-filter').on('change', function () {
   }
 });
 
-function Animal(object) {
 
-
-  this.image_url = object.image_url;
-  this.title = object.title;
-  this.description = object.description;
-  this.keyWord = object.keyword;
-  this.horns = object.horns;
-}
 
 
 $("#filter").on('change', function() {
