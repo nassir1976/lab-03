@@ -22,7 +22,7 @@ h1{
 }
 .bar {
   height: 10px;
-  width: 35%;
+  width: 45%;
   margin: 5px auto;
   background-color:green;
   border-radius: 5px;
@@ -31,13 +31,23 @@ h1{
 .bar:hover {
   background: sandybrown;
 }
-#page1,#page2{
+#page1,#page2 {
 font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
 border-radius: 7px;
 width:120px;
 letter-spacing: normal;
 justify-content: space-evenly;
+
+}
+#filter{
+  font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+border-radius: 7px;
+widows: 130px;
+letter-spacing: normal;
+justify-content: space-evenly;
+
 
 }
 
@@ -49,7 +59,7 @@ justify-content: space-evenly;
   background-color:steelblue;
 }
 
-#keyword-filter ,filter {
+#keyword-filter  {
   font-family: 'Courier New', Courier, monospace;
 font-weight: bold;
 border-radius: 7px;

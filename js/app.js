@@ -82,7 +82,8 @@ function sortByHorns(horns) {
     let hornA = $(a).attr("horns");
     let hornB = $(b).attr("horns");
 
-    return parseInt(hornA) - parseInt(hornB);
+    return parseInt(hornA)-parseInt(hornB);
+
 
 
   });
@@ -112,16 +113,16 @@ function Animal(object) {
   this.description = object.description;
   this.keyWord = object.keyword;
   this.horns = object.horns;
-};
+}
 
 
-$("#filter").on('change', function () {
+$("#filter").on('change', function() {
   let value = this.value;
   let $allImagesValue = $('div');
-  for (let i = 0; i < $allImagesValue.length; i++) {
-    if ($allImagesValue[i].attributes.keyword.value !== value) {
+  for(let i = 0; i < $allImagesValue.length; i++ ) {
+    if($allImagesValue[i].attributes.keyword.value !== value) {
       $($allImagesValue[i]).hide();
-    } else if ($allImagesValue[i].attributes.keyword.value === value) {
+    } else if( $allImagesValue[i].attributes.keyword.value === value) {
       $($allImagesValue[i]).show();
     }
   }
